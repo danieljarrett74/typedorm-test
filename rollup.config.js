@@ -1,4 +1,3 @@
-import typescript from "@rollup/plugin-typescript";
 import json from '@rollup/plugin-json';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from "@rollup/plugin-node-resolve";
@@ -11,12 +10,7 @@ export default {
 	},
 	"external": [],
 	"plugins": [
-		commonjs({
-			transformMixedEsModules:true,
-			dynamicRequireTargets: [
-				'node_modules/@typedorm/common/public-api/*.js'
-			  ] }),
-		typescript(),
+		commonjs(),
 		nodeResolve(),
 		json(),
 	]
