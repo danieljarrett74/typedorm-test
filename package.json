@@ -6,7 +6,9 @@
   "files": [
     ".dist/"
   ],
+  "type": "module",
   "scripts": {
+    "prebuild":"tsc",
     "build": "rollup -c"
   },
   "license": "MIT",
